@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corbeille - PROSIT 4</title>
+    <link href="assets/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pageBlanche">
+        <h1>CALCULE TA MOYENNE</h1>
+        <form id="form" action="#" onsubmit="calcul();return false">
+            <table>
+                <tr>
+                    <th>EXAM</th>
+                    <th>NOTE</th>
+                    <th>COEFFICIENT</th>
+                </tr>
+                <tr>
+                    <td>NOTE1</td>
+                    <td><input type="number" name="NOTE1" id="NOTE1" placeholder="Votre note /20" required min="0" max="20"></td>
+                    <td><input type="number" name="coef1" id="coef1" placeholder="Coefficient de la note" required min="1"></td>
+                </tr>
+                <tr>
+                    <td>NOTE2</td>
+                    <td><input type="number" name="NOTE2" id="NOTE2" placeholder="Votre note /20" required min="0" max="20"></td>
+                    <td><input type="number" name="coef2" id="coef2" placeholder="Coefficient de la note" required min="1"></td>
+                </tr>
+                <tr>
+                    <td>NOTE3</td>
+                    <td><input type="number" name="NOTE3" id="NOTE3" placeholder="Votre note /20" required min="0" max="20"></td>
+                    <td><input type="number" name="coef3" id="coef3" placeholder="Coefficient de la note" required min="1"></td>
+                </tr>
+            </table>
+
+            <div class="container">
+                <input type="submit" value="valider" id="submit">
+                <input type="reset" value="Réinitialiser">
+
+                <table id="moy">
+                    <tr>
+                        <th>MOYENNE</th>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="moyenne" id="moyenne" placeholder="Pas de moyenne pour le moment" disabled></td>
+                    </tr>
+                </table>
+            </div>
+
+        </form>
+    </div>
+    <script>
+        if (document.getElementById("coef3").value == "") {
+            document.getElementById("coef3").focus();
+        }
+        if (document.getElementById("NOTE3").value == "") {
+            document.getElementById("NOTE3").focus();
+        }
+        if (document.getElementById("coef2").value == "") {
+            document.getElementById("coef2").focus();
+        }
+        if (document.getElementById("NOTE2").value == "") {
+            document.getElementById("NOTE2").focus();
+        }
+        if (document.getElementById("coef1").value == "") {
+            document.getElementById("coef1").focus();
+        }
+        if (document.getElementById("NOTE1").value == "") {
+            document.getElementById("NOTE1").focus();
+        }
+/*
+        document.getElementById('form').addEventListener('input', function check() {
+            var inputs = this.querySelectorAll('input[type="number"]');
+            var allFilled = Array.from(inputs).every(input => input.value !== '');
+            var submitBtn = document.getElementById('submit');
+
+            if (allFilled) {
+                submitBtn.classList.add('activation');
+            } else {
+                submitBtn.classList.remove('activation');
+            }
+        });
+*/
+        function calcul() {
+            var input1 = document.getElementById("NOTE1").value;
+            var input2 = document.getElementById("NOTE2").value;
+            var input3 = document.getElementById("NOTE3").value;
+
+            var input1a = document.getElementById("coef1").value;
+            var input2a = document.getElementById("coef2").value;
+            var input3a = document.getElementById("coef3").value;
+
+            var moyenne = (Number(input1) * Number(input1a) + Number(input2) * Number(input2a) + Number(input3) * Number(input3a)) / (Number(input1a) + Number(input2a) + Number(input3a));
+            document.getElementById("moyenne").value = moyenne
+        }
+
+    </script>
+</body>
+
+</html>

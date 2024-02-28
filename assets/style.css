@@ -1,0 +1,137 @@
+html {
+    background: #5f2c82;
+    background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);
+    background: linear-gradient(to right, #49a09d, #5f2c82);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table[id="moy"] {
+    margin-top: 20px;
+    width: 20%;
+}
+
+#moy {
+    margin-left: 60%;
+}
+
+
+.container {
+    display: flex; 
+    justify-content: left; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #a2bee3;
+}
+
+tr:nth-child(even) {
+    background-color: #d4d4d4;
+}
+
+tr {
+    background-color: rgb(234, 231, 231);
+}
+
+.pageBlanche {
+    border: 3px solid #000000;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 20px 0;
+    margin-top: 15%;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+input[type="number"] {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 8px;
+}
+
+input[type="number"]:focus {
+    outline: none;
+}
+
+input[type="number"]:invalid {
+}
+
+input[type="number"]:valid { 
+}
+
+input[type="reset"] {
+    margin: 20px;
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: #a2bee3;
+}
+
+input[type="reset"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+input[type="reset"]:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"] {
+    margin: 20px;
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: #a2bee3;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"]:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+/*
+input[type="submit"].activation {
+    background-color: green !important;
+  }
+*/
